@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-size:16px;
+
+}
+body{
+    font-family: 'Poppins', sans-serif serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(56, 202, 207);
+
+}
+a{
+   
+    text-decoration: none;
+}
+
+.btn{
+    padding:0.8rem 1.2rem;
+    text-transform: captialize;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition:all .5s ease-in;
+    
+}
+.btn:hover{
+    cursor:pointer;
+    transform : translateY(-2px);
+}
+.btn-red{
+    background-color: rgba(231, 14, 14, 0.5);
+    border: 2px solid rgba(255,125,125);
+    color:#fff;
+
+}
+.btn-green{
+    background-color: rgba(11, 243, 146, 0.5);
+    border: 2px solid rgba(125,255,255);
+    color:#fff;
+
+}
+.btn-blue{
+    background-color: rgba(124, 11, 230, 0.5);
+    border: 2px solid rgba(125,255,255);
+    color:#fff;
+
+}
+.modal-card{
+    padding:1rem;
+    border-radius: 8px;
+    border: 2px solid #c12042;
+    width: 75%;
+    max-width:  30rem;
+    margin:1rem auto;
+    transition: all 0.5s ease-in;
+    transform: translateY(-1000px);
+    position:relative;
+    z-index: 10002;
+    transition:all .5s ease-in;
+
+}
+.img-fluid{
+    width: 100%;
+    height:auto;
+    display: block;
+    object-fit: cover;
+}
+.modal-header{
+    padding: 0rem;
+
+}
+.modal-card.show{
+  transform: translateY(0px);  
+}
+.btn-close{
+  position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1003;
+}
+
+.btn-close button{
+    padding:0.5rem;
+    font-size: 1rem;
+    width:1rem;
+    height: 1rem;
+    font-weight: 900;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(238, 134, 134, 0.5);
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: linear-gradient(90deg, 
+                     rgba(255,125,125,0.85)
+                     rgba(125,255,0.85)
+                     rgba(125,125,255,0.5));
+    z-index:1001;
+    visibility: hidden;
+    transition: all 0.5 ease;
+}
+.overlay.show{
+    
+    visibility: visible;
+
+}
